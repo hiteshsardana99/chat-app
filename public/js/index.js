@@ -10,6 +10,13 @@ socket.on('connect', function()  {
 
 });
 
+socket.on('alertNewUser', function(message) {
+  console.log('Alert', message);
+});
+
+socket.on('init' ,function(message) {
+  console.log('start', message);
+});
 
 socket.on('newMessage', function(message){
   console.log('new message received : ', message);
